@@ -1,10 +1,6 @@
-const arr = [7,2,1,6,8,5,3,4];
+const {swap} = require('./utils.js');
 
-function swap(arr, i, j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-}
+const arr = [7,2,1,6,8,5,3,4];
 
 function partition(arr,l,r){
   const pivot = arr[r]

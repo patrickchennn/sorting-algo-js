@@ -1,3 +1,5 @@
+const {swap} = require("./utils");
+
 const arr = [10,80,30,90,40,50,70];
 
 function partition(arr,l,r){
@@ -17,8 +19,6 @@ function partition(arr,l,r){
     } while (arr[j] > pivot);
 
 
-
-
     console.log(`i=${i} j=${j}`)
     if (i >= j){
       console.log(`i>=j ==> ${i}>=${j} ==> ${arr[i]}>=${arr[j]}`);
@@ -26,9 +26,7 @@ function partition(arr,l,r){
       return j;
     }
     console.log("before swap: ",arr)
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+    swap(arr,i,j)
     console.log("after swap: ",arr)
   }
 }

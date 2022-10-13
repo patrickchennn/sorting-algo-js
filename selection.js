@@ -1,6 +1,6 @@
+const {swap} = require('./utils.js');
 const arr = [2,7,4,1,5,3];
 
-const min = (a,b) => a<b ? a : b;
 
 
 for(let i=0; i<arr.length-1; i++){
@@ -15,8 +15,6 @@ for(let i=0; i<arr.length-1; i++){
   console.log(`swap(${arr[i]}(idx: ${i}), ${arr[minIdx]}(idx: ${minIdx}))`)
   console.log(arr,'\n');
 
-  let temp = arr[i];
-  arr[i] = arr[minIdx];
-  arr[minIdx] = temp;
+  swap(arr,i,minIdx);
 }
 console.log(arr);
