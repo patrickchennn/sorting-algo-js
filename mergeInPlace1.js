@@ -1,5 +1,5 @@
 /*
-version O(n2 * log(n))
+version O(n^2 * log(n))
 https://www.geeksforgeeks.org/in-place-merge-sort/
 https://www.interviewkickstart.com/learn/in-place-merge-sort
 */
