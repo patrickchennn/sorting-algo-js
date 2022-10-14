@@ -1,3 +1,5 @@
+import { swap } from './utils.js';
+
 function sort(arr){
 	let n = arr.length;
   // Start with a big gap, then reduce the gap
@@ -22,14 +24,7 @@ let arr = [23,29,15,19,31,7,9,5,2];
 sort(arr);
 console.log(arr);
 
-function swap(arr, i, j) {
-  let temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
-}
-
 /*
 https://www.youtube.com/watch?v=9crZRd8GPWM
 7.11 Shell Sort algorithm | sorting algorithms | Full explanation with code | data structures
-
 */

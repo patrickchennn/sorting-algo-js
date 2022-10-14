@@ -1,4 +1,4 @@
-const {swap} = require('./utils.js');
+import { swap } from './utils.js';
 
 const arr = [5,1,4,2,8,0,2];
 
