@@ -1,6 +1,8 @@
+import chalk from 'chalk';
 import { swap } from './utils.js';
 
-const arr = [7,2,1,6,8,5,3,4];
+// const arr = [7,2,1,6,8,5,3,4];
+const arr = [10, 5, 2, 3,9,5,6,13,13,41,5,5,3,523,45,2345,234,52,4523452345]
 
 function partition(arr,l,r){
   const pivot = arr[r]
@@ -26,7 +28,7 @@ function quick(arr,l,r){
   }
 }
 quick(arr,0,arr.length-1);
-console.log("sorted arr: ",arr);
+console.log(chalk.greenBright("sorted arr: ",arr))
 
 /* resources:
 https://www.geeksforgeeks.org/quick-sort/

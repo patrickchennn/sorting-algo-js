@@ -10,6 +10,7 @@ function getNextGap(gap){
 
 
 function sort(arr){
+  
   let n = arr.length;
   let gap = n;
   let swapped = true;
