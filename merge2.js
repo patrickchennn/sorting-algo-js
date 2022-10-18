@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 // arr.length = 8
 const arr = [8,3,5,6,4,1,2,7];
 
@@ -31,14 +33,14 @@ function actualMerge(arr,left,mid,right){
 	}
 	
 	while (i < m){
-		console.log(`i<m ? ${i}<${m} ==> ${i<m}`);
+		console.log(chalk.magenta(`i<m ? ${i}<${m}`))
 		arr[k] = L[i];
 		tempSortedArr[x++]=L[i]
 		i++;
 		k++;
 	}
 	while (j < n) {
-		console.log(`j<n ? ${j}<${n} ==> ${j<n}`);
+		console.log(chalk.magenta(`j<n ? ${j}<${n}`))
 		arr[k] = R[j];
 		tempSortedArr[x++]=R[j]
 		j++;
@@ -65,7 +67,7 @@ function merge(arr,l,r){
   merge(arr,l,mid);
   merge(arr,mid+1,r);
 
-	console.log("conquer and combine part");
+	console.log(chalk.blueBright("merge part"))
   actualMerge(arr,l,mid,r);
 }
 // [8,3,5,6,4,1,2,7]
