@@ -12,10 +12,10 @@ function merge_piles(piles,arr) {
   for(let i=0; i<arr.length; i++){
     for(let j=0; j<piles.length; j++){
       const pile = piles[j]
-      // uncomment this to see the undefined value
-      // if(!pile.length) {
-      //   continue;
-      // }
+      // this is needed to prevent from undefined pile which it means the pile contains nothing
+      if(!pile.length) {
+        continue;
+      }
       const lastVal = pile[pile.length-1]
       if(lastVal<min){
         min = lastVal;
