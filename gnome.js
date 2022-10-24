@@ -13,7 +13,7 @@ function gnomeSort(arr, n){
     if (index == 0) index++;
     print(arr,arr[index],arr[index-1],"yellow")
     process.stdout.write(" ==> ");
-    if (arr[index-1] >= arr[index]){
+    if (arr[index-1] > arr[index]){
       print(arr,arr[index],arr[index-1],"green")
       console.log("")
       swap(arr,index,index-1)
