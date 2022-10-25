@@ -1,23 +1,23 @@
 import { swap } from "./utils.js";
 import chalk from "chalk";
 
-function exchangeSort(arr){
-  for(let i=0; i<arr.length; i++){
-    console.log(chalk.magentaBright(`\nITERATION #${i}`))
-    for(let j=i+1; j<arr.length; j++){
-      print(arr,arr[i],arr[j]);
-      process.stdout.write(" ==> ");
-      if(arr[i]>arr[j]){
-        print(arr,arr[i],arr[j],"green");
-        console.log("")
-        swap(arr,i,j);
-      }else{
-        console.log(chalk.red('no swap'))
+  function exchangeSort(arr){
+    for(let i=0; i<arr.length; i++){
+      console.log(chalk.magentaBright(`\nITERATION #${i}`))
+      for(let j=i+1; j<arr.length; j++){
+        print(arr,arr[i],arr[j]);
+        process.stdout.write(" ==> ");
+        if(arr[i]>arr[j]){
+          print(arr,arr[i],arr[j],"green");
+          console.log("")
+          swap(arr,i,j);
+        }else{
+          console.log(chalk.red('no swap'))
+        }
       }
+      console.log(chalk.magentaBright(`AFTER [${arr}]`))
     }
-    console.log(chalk.magentaBright(`AFTER [${arr}]`))
   }
-}
 
 const arr = [84,69,76,86,94,91];
 exchangeSort(arr);
